@@ -4,7 +4,7 @@ import "@/styles/globals.css";
 import { besley, sourceCodePro } from "@/styles/fonts";
 
 export const metadata: Metadata = {
-  title: "erickact.com",
+  title: "Hey, I'm Ericka Castillo. I'm a Software Engineer building products",
   description:
     "Hey, I'm Ericka Castillo. I'm a Software Engineer building products",
 };
