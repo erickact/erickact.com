@@ -29,11 +29,13 @@ export default async function Home() {
         </div>
       </div>
       <div>
-        <h1 className="text-base uppercase font-bold mb-6 tracking-widest">
-          ABOUT ME
-        </h1>
+        <Link href="/about">
+          <h1 className="text-base uppercase font-bold mb-6 tracking-widest">
+            ABOUT ME
+          </h1>
+        </Link>
         <p>{page.excerpt}</p>
-        <div className="mt-3 mb-6">
+        <div className="mt-3 mb-12">
           <Link
             href="/about"
             className="font-semibold hover:underline text-blue-300"
@@ -54,15 +56,6 @@ export default async function Home() {
                   </h3>
                 </Link>
                 <p>{project.excerpt}</p>
-              </div>
-              <div className="flex justify-end items-end">
-                <Image
-                  src={project.images[0].asset.url}
-                  alt="Project image"
-                  width={500}
-                  height={300}
-                  className="rounded-lg"
-                />
               </div>
             </li>
           ))}

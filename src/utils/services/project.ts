@@ -7,6 +7,7 @@ const PROJECT_QUERY = `*[
 ]|order(completionDate desc)[0...3]{
   title,
   body,
+  technologies,
   _id,
   slug,
   completionDate,
@@ -35,6 +36,7 @@ const PROJECT_BY_SLUG_QUERY = `*[
 ][0]{
   title,
   body,
+  technologies,
   completionDate,
   images[]{
     asset -> { _id, url }
