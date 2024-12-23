@@ -66,7 +66,7 @@ export default async function Home() {
           href="/projects"
           className="font-semibold hover:underline  text-blue-300"
         >
-          Read more projects →
+          See more projects →
         </Link>
       </div>
     </Wrapper>
