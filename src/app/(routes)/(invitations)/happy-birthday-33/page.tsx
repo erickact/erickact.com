@@ -1,6 +1,12 @@
 import React from "react";
 import FlickeringLetter from "@/components/shared/FlickeringLetter";
 import Wrapper from "@/components/shared/Wrapper";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Ericka's birthday",
+  description: "Acompáñanos a celebrar el cumpleaños de Ericka Castillo  🎉",
+};
 
 const HappyBirthday33 = () => {
   return (
