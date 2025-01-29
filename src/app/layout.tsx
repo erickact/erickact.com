@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import "@/styles/globals.css";
-import { besley, sourceCodePro } from "@/styles/fonts";
+import { besley, msMadi, sourceCodePro } from "@/styles/fonts";
 
 export const metadata: Metadata = {
   title: "Hey, I'm Ericka Castillo. I'm a Software Engineer building products",
@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${besley.variable} ${sourceCodePro.variable}`}
+      className={`${besley.variable} ${sourceCodePro.variable} ${msMadi.variable}`}
       suppressHydrationWarning
     >
       <body className="antialiased">{children}</body>

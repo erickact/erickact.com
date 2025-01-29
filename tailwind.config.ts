@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 export default {
   content: [
@@ -17,7 +18,23 @@ export default {
         "brand-gray": "#a2a2a2",
         "brand-black": "#0c0f11",
       },
+      textShadow: {
+        DEFAULT:
+          "0 0 30px #EC637B, 0 0 10px rgba(230, 161, 173, 0.41), 0 0 100px #E6A1AD, 0 0 500px #F36780, 5px 9px 5px rgba(0, 0, 0, 0.5)",
+        off: "7px 7px 5px rgba(0, 0, 0, 0.5)",
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          "text-shadow": (value) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme("textShadow") },
+      );
+    }),
+  ],
 } satisfies Config;

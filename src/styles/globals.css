@@ -23,7 +23,20 @@
     font-family: var(--font-source-code-pro), monospace;
   }
 
+  .font-ms-madi {
+    font-family: var(--font-ms-madi);
+  }
+
   .link {
     @apply underline;
+  }
+
+  .neon {
+    @apply text-shadow;
+  }
+
+  .neon-off {
+    @apply text-shadow-off;
+    color: rgba(46, 46, 46, 0.61);
   }
 }
