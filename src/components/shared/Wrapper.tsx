@@ -6,7 +6,10 @@ const Wrapper = (props: React.HTMLAttributes<HTMLDivElement>) => {
 
   return (
     <div
-      className={cn("mx-auto max-w-[90vw] md:max-w-4xl", className)}
+      className={cn(
+        "mx-auto max-w-[90vw] md:max-w-4xl lg:max-w-7xl",
+        className,
+      )}
       {...rest}
     >
       {children}

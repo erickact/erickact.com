@@ -8,6 +8,7 @@ import { getAboutMe } from "@/utils/services/page";
 export default async function Home() {
   const projects = await getProjectsForHome();
   const page = await getAboutMe();
+  
   return (
     <Wrapper>
       <div className="flex flex-col md:flex-row gap-8 items-center mb-16">
