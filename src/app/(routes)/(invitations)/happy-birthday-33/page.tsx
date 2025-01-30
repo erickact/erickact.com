@@ -2,7 +2,6 @@ import React from "react";
 import FlickeringLetter from "@/components/shared/FlickeringLetter";
 import Wrapper from "@/components/shared/Wrapper";
 import { Metadata } from "next";
-import { headers } from "next/headers";
 
 export const metadata: Metadata = {
   title: "Ericka's birthday",
