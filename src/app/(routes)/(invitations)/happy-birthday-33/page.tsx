@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: "Acompáñanos a celebrar el cumpleaños de Ericka Castillo  🎉",
 };
 
-type EventHype = "prelude" | "anticipation" | "grand_finale";
+type EventHype = "prelude" | "anticipation" | "grand_finale" | "afterparty";
 
 const HappyBirthday33 = async ({
   searchParams,
@@ -22,6 +22,7 @@ const HappyBirthday33 = async ({
     prelude: "3:00 PM",
     anticipation: "5:00 PM",
     grand_finale: "7:00 PM",
+    afterparty: "9:00 PM",
   };
 
   return (
