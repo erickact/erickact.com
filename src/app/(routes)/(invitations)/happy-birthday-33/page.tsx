@@ -2,13 +2,28 @@ import React from "react";
 import FlickeringLetter from "@/components/shared/FlickeringLetter";
 import Wrapper from "@/components/shared/Wrapper";
 import { Metadata } from "next";
+import { headers } from "next/headers";
 
 export const metadata: Metadata = {
   title: "Ericka's birthday",
   description: "Acompáñanos a celebrar el cumpleaños de Ericka Castillo  🎉",
 };
 
-const HappyBirthday33 = () => {
+type EventHype = "prelude" | "anticipation" | "grand_finale";
+
+const HappyBirthday33 = async ({
+  searchParams,
+}: {
+  searchParams: Promise<{ ["event_hype"]: EventHype | string[] | undefined }>;
+}) => {
+  const event_hype = (await searchParams).event_hype;
+
+  const hours = {
+    prelude: "3:00 PM",
+    anticipation: "5:00 PM",
+    grand_finale: "7:00 PM",
+  };
+
   return (
     <Wrapper className="md:text-left text-center pb-20">
       <p className="text-3xl">Acompáñanos a celebrar</p>
@@ -24,8 +39,8 @@ const HappyBirthday33 = () => {
               <span className="font-bold">📅 Cuándo:</span> Sábado 1 de Febrero
             </p>
             <p>
-              <span className="font-bold">🕖 Hora:</span> A partir de las 5:00
-              PM
+              <span className="font-bold">🕖 Hora:</span> A partir de las{" "}
+              {hours[event_hype as EventHype] ?? "5:00 PM"}
             </p>
             <p>
               <span className="font-bold">📍 Dónde:</span> Calle Vidal 140, dpto
